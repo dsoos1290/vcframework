@@ -8,6 +8,16 @@ require_once __DIR__
   . DIRECTORY_SEPARATOR
   . 'bootstrap.php';
 
+if (
+  defined('FAKE_CLI')
+  && FAKE_CLI
+  && defined('APP_ENV')
+  && APP_ENV === 'prod'
+) {
+  header('HTTP/1.1 403 Forbidden');
+  die('Web-based CLI execution is disabled in production.');
+}
+
 function api_date_to_mysql($date, $milliseconds = false)
 {
   if ($date === null || $date === '') {
