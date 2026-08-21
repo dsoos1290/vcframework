@@ -13,8 +13,10 @@
 </header>
 
 <?php foreach (flash() as $flash) { ?>
-  <div class="flash flash-<?php echo htmlspecialchars($flash['type']); ?>">
-    <?php echo htmlspecialchars($flash['message']); ?>
+  <div class="container mt-3">
+    <div class="alert alert-<?php echo $flash['type'] === 'error' ? 'danger' : htmlspecialchars($flash['type']); ?>">
+      <?php echo htmlspecialchars($flash['message']); ?>
+    </div>
   </div>
 <?php } ?>
 
