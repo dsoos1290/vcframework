@@ -10,7 +10,7 @@ class Pages extends App {
     var_dump($result->fetch_all(MYSQLI_ASSOC));
     */
 
-    // $this->flash('success', 'Sikeres mentés.');
+    // $this->flash('success', 'Saved successfully.');
 
     $this->set('title', 'App');
     $this->render('pages/index');
