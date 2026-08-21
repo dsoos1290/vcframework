@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="<?php echo APP_LANG; ?>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><?php echo htmlspecialchars(isset($title) ? $title : APP_TITLE); ?></title>
+  <link href="/css/app.css?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>" rel="stylesheet">
+</head>
+<body class="js">
+
+<header>
+  <?php element('nav'); ?>
+</header>
+
+<?php foreach (flash() as $flash) { ?>
+  <div class="flash flash-<?php echo htmlspecialchars($flash['type']); ?>">
+    <?php echo htmlspecialchars($flash['message']); ?>
+  </div>
+<?php } ?>
+
+<main>
+  <?php echo $content; ?>
+</main>
+
+<footer>
+  &copy; <?php echo date('Y') . ' ' . APP_TITLE; ?>
+</footer>
+
+<script src="/js/app.js?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof App !== 'undefined') {
+      App.init();
+    }
+  });
+</script>
+</body>
+</html>
