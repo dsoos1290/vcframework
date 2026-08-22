@@ -1,4 +1,5 @@
 <?php
+define('FW_VER', '0.1.0');
 
 if (version_compare(PHP_VERSION, '5.3.0', '<')) {
   die('PHP 5.3.0 or newer is required.');
