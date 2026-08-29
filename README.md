@@ -2,7 +2,7 @@
 
 Lightweight PHP framework with a minimal application skeleton for building simple web applications and CLI scripts.
 
-VC Framework uses a simple Controller-View architecture without a Model layer. Database access is handled directly through MySQLi.
+VC Framework uses a simple **V**iew-**C**ontroller architecture without a Model layer. Database access is handled directly through MySQLi.
 
 It is designed to remain small, easy to understand and ready to use without Composer or external PHP framework dependencies. It is compatible with PHP 5.3 and newer.
 
