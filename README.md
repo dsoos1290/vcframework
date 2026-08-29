@@ -4,13 +4,14 @@ Lightweight PHP framework with a minimal application skeleton for building simpl
 
 VC Framework uses a simple **V**iew-**C**ontroller architecture without a Model layer. Database access is handled directly through MySQLi.
 
-It is designed to remain small, easy to understand and ready to use without Composer or external PHP framework dependencies. It is compatible with PHP 5.3 and newer.
+It is designed to remain small, easy to understand and ready to use without Composer or external PHP framework dependencies. Composer packages can optionally be used when a `vendor/autoload.php` file is present. It is compatible with PHP 5.3 and newer.
 
 ## Features
 
 - Minimal ready-to-use application skeleton
 - Lightweight Controller-View architecture without a Model layer
 - No Composer required
+- Optional Composer package support
 - No external PHP framework dependencies
 - Simple routing
 - Controllers and application base controller
