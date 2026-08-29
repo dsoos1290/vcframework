@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="<?php echo FW_NAME . (APP_ENV != 'prod' ? ' ' . FW_VER : ''); ?>">
   <title><?php echo htmlspecialchars(isset($title) ? $title : APP_TITLE); ?></title>
   <link href="/css/app.css?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>" rel="stylesheet">
 </head>
