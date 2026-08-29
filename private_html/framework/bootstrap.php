@@ -1,5 +1,6 @@
 <?php
 define('FW_VER', '0.1.0');
+define('FW_NAME', 'VC Framework');
 
 if (version_compare(PHP_VERSION, '5.3.0', '<')) {
   die('PHP 5.3.0 or newer is required.');
@@ -8,6 +9,13 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
 define('DS', DIRECTORY_SEPARATOR);
 
 define('ROOT', dirname(dirname(__DIR__)));
+
+// Composer support ->
+$composer_autoload = ROOT . DS . 'vendor' . DS . 'autoload.php';
+if (file_exists($composer_autoload)) {
+    require_once $composer_autoload;
+}
+// <- Composer support
 
 define('PRIV', basename(dirname(__DIR__)));
 
