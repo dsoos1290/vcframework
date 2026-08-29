@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2026-08-21
+## [0.1.0] - 2026-08-29
 
 ### Added
 
@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - Configurable application timezone, language, title and version.
 - Apache URL rewriting.
 - Basic CSS and JavaScript application files.
+- Optional Composer package support.
 - No Composer dependency.
 - No external PHP framework dependency.
 - PHP 5.3+ compatibility.
