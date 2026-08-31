@@ -26,6 +26,7 @@ It is designed to remain small, easy to understand and ready to use without Comp
 - Unique run IDs for CLI executions
 - Central PHP error logging
 - Apache URL rewriting
+- Subdirectory installation support
 - Basic CSS and JavaScript application files
 - PHP 5.3+ compatibility
 
