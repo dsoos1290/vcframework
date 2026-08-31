@@ -1,5 +1,14 @@
 <?php
 
+function url($path = '')
+{
+  if ($path === '' || $path === '/') {
+    return BASE_URL . '/';
+  }
+
+  return BASE_URL . '/' . ltrim($path, '/');
+}
+
 function element($element, $data = array())
 {
   $element_file = ROOT
