@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2026-08-29
+## [0.1.0] - 2026-08-31
 
 ### Added
 
@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 - Daily CLI log directory structure.
 - Configurable application timezone, language, title and version.
 - Apache URL rewriting.
+- Subdirectory installation support.
 - Basic CSS and JavaScript application files.
 - Optional Composer package support.
 - No Composer dependency.
