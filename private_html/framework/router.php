@@ -55,6 +55,19 @@ $request_path = parse_url(
   PHP_URL_PATH
 );
 
+if (
+  BASE_URL !== ''
+  && (
+    $request_path === BASE_URL
+    || strpos($request_path, BASE_URL . '/') === 0
+  )
+) {
+  $request_path = substr(
+    $request_path,
+    strlen(BASE_URL)
+  );
+}
+
 $request_path = '/' . trim($request_path, '/');
 
 if ($request_path !== '/') {
