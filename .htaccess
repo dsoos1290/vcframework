@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^public_html(?:/|$) - [L]
+RewriteRule ^index\.php$ - [L]
+
+RewriteRule ^(.*)$ public_html/$1 [L]
