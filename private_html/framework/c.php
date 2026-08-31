@@ -78,7 +78,7 @@ class C
 
   protected function redirect($url)
   {
-    header('Location: ' . $url);
+    header('Location: ' . url($url));
     exit;
   }
 }
