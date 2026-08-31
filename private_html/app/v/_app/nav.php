@@ -1,3 +1,3 @@
 <nav>
-  <a href="/">/</a>
+  <a href="<?php echo url('/'); ?>">/</a>
 </nav>
