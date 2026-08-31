@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="<?php echo FW_NAME . (APP_ENV != 'prod' ? ' ' . FW_VER : ''); ?>">
   <title><?php echo htmlspecialchars(isset($title) ? $title : APP_TITLE); ?></title>
-  <link href="/css/app.css?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>" rel="stylesheet">
+  <link href="<?php echo url('css/app.css'); ?>?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>" rel="stylesheet">
 </head>
 <body class="js">
 
@@ -29,7 +29,7 @@
   &copy; <?php echo date('Y') . ' ' . APP_TITLE; ?>
 </footer>
 
-<script src="/js/app.js?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>"></script>
+<script src="<?php echo url('js/app.js'); ?>?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof App !== 'undefined') {
