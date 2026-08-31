@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="<?php echo FW_NAME . (APP_ENV != 'prod' ? ' ' . FW_VER : ''); ?>">
+  <meta name="generator" content="<?php echo FW_NAME . (APP_ENV != 'prod' ? ' v' . FW_VER : ''); ?>">
   <title><?php echo htmlspecialchars(isset($title) ? $title : APP_TITLE); ?></title>
   <link href="<?php echo url('css/app.css'); ?>?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
 </main>
 
 <footer>
-  &copy; <?php echo date('Y') . ' ' . APP_TITLE; ?>
+  &copy; <?php echo date('Y') . ' ' . APP_TITLE; ?> &middot; Powered by <a href="<?php echo FW_URL; ?>" target="_blank" rel="noopener"><?php echo FW_NAME . (APP_ENV != 'prod' ? ' v' . FW_VER : ''); ?></a>
 </footer>
 
 <script src="<?php echo url('js/app.js'); ?>?v=<?php echo APP_VER; ?><?php echo (APP_ENV != 'prod' ? '&t=' . time() : ''); ?>"></script>
