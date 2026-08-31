@@ -10,6 +10,43 @@ define('DS', DIRECTORY_SEPARATOR);
 
 define('ROOT', dirname(dirname(__DIR__)));
 
+if (PHP_SAPI !== 'cli' && (!defined('FAKE_CLI') || !FAKE_CLI)) {
+  $document_root = isset($_SERVER['DOCUMENT_ROOT'])
+    ? realpath($_SERVER['DOCUMENT_ROOT'])
+    : false;
+
+  $root = realpath(ROOT);
+
+  $base_url = '';
+
+  if (
+    $document_root !== false
+    && $root !== false
+    && strpos($root, $document_root) === 0
+  ) {
+    $base_url = substr(
+      $root,
+      strlen($document_root)
+    );
+
+    $base_url = str_replace(
+      DIRECTORY_SEPARATOR,
+      '/',
+      $base_url
+    );
+
+    $base_url = '/' . trim($base_url, '/');
+
+    if ($base_url === '/') {
+      $base_url = '';
+    }
+  }
+
+  define('BASE_URL', $base_url);
+} else {
+  define('BASE_URL', '');
+}
+
 // Composer support ->
 $composer_autoload = ROOT . DS . 'vendor' . DS . 'autoload.php';
 if (file_exists($composer_autoload)) {
