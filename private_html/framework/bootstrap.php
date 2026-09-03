@@ -132,9 +132,13 @@ function db()
     DB_NAME
   );
 
-  $db->set_charset(DB_CHAR);
+  if (defined('DB_CHAR')) {
+    $db->set_charset(DB_CHAR);
+  }
 
-  $db->query("SET time_zone = '" . DB_TIME . "'");
+  if (defined('DB_TIME')) {
+    $db->query("SET time_zone = '" . DB_TIME . "'");
+  }
 
   return $db;
 }
