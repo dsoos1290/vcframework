@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2026-09-03
+## [0.1.0] - 2026-09-23
 
 ### Added
 
@@ -14,6 +14,8 @@ All notable changes to this project will be documented in this file.
 - Reusable view elements.
 - Layout support.
 - Flash message support.
+- Optional application session support.
+- Optional absolute application URL support.
 - MySQLi database connection support.
 - Application and database configuration files.
 - Development and production environment configuration.

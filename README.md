@@ -18,6 +18,8 @@ It is designed to remain small, easy to understand and ready to use without Comp
 - Views and reusable view elements
 - Layout support
 - Flash messages
+- Optional application session support
+- Optional absolute application URL support
 - MySQLi database connection
 - Application and database configuration
 - Development and production environments
