@@ -1,5 +1,6 @@
 <?php
-// define('APP_NAME', 'App');
+// define('APP_NAME', 'VC Framework');
+// define('APP_PROJECT_URL', 'https://github.com/dsoos1290/vcframework');
 define('APP_VER', '0.1.0');
 define('APP_TZ', 'UTC');
 define('APP_ENV', 'dev'); // prod
