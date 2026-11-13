@@ -37,3 +37,7 @@ It is designed to remain small, easy to understand and ready to use without Comp
 1. Download the latest version: https://github.com/dsoos1290/vcframework/releases/latest
 2. Rename `private_html/app/config/db-sample.php` to `db.php`.
 3. Open `db.php` and configure your database connection.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the release history.
